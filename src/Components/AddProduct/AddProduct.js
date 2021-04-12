@@ -33,7 +33,7 @@ const handleImageUpload = products => {
   imageData.set('key', '94a51f863defbefddf904f3af87d599c');
   imageData.append('image', products.target.files[0]);
 
-  axios.post('https://api.imgbb.com/1/upload', imageData)
+  axios.post('https://secret-basin-42253.herokuapp.com/upload', imageData)
   .then(function (response) {
     setImageURL(response.data.data.display_url);
   })
